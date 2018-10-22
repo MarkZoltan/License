@@ -1,0 +1,1 @@
+﻿opencv_highgui341d.lib(opencv_highgui341d.dll) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

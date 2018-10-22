@@ -1,0 +1,5 @@
+﻿  Ochi2.cpp
+c:\users\blank\desktop\proiect\mark\mark\ochi2.cpp(16): warning C4018: '<': signed/unsigned mismatch
+c:\users\blank\desktop\proiect\mark\mark\ochi2.cpp(21): warning C4018: '<': signed/unsigned mismatch
+c:\users\blank\desktop\proiect\mark\mark\ochi2.cpp(55): warning C4018: '<': signed/unsigned mismatch
+  Mark.vcxproj -> C:\Users\blank\Desktop\Proiect\Mark\Debug\Mark.exe

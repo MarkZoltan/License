@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="opencv_win_native_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-opencv_win_native Condition="'$(Linkage-opencv_win_native)' == ''">dynamic</Linkage-opencv_win_native>
+    <CallingConvention-opencv_win_native Condition="'$(CallingConvention-opencv_win_native)' == ''">cdecl</CallingConvention-opencv_win_native>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and Debug" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_videostab310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_videoio310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_video310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_superres310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_stitching310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_shape310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_photo310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_objdetect310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_ml310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_imgproc310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_imgcodecs310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_highgui310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_flann310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_features2d310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_calib3d310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Debug\opencv_core310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and Release" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_videostab310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_videoio310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_video310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_superres310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_stitching310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_shape310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_photo310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_objdetect310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_ml310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_imgproc310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_imgcodecs310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_highgui310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_flann310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_features2d310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_calib3d310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\Release\opencv_core310.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and Debug" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_videostab310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_videoio310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_video310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_superres310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_stitching310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_shape310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_photo310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_objdetect310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_ml310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_imgproc310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_imgcodecs310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_highgui310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_flann310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_features2d310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_calib3d310d.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Debug\opencv_core310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and Release" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_videostab310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_videoio310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_video310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_superres310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_stitching310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_shape310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_photo310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_objdetect310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_ml310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_imgproc310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_imgcodecs310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_highgui310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_flann310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_features2d310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_calib3d310.lib;$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\Release\opencv_core310.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <UsingTask TaskName="opencv_win_native_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="opencv_win_native_init">
+    <opencv_win_native_Contains Text="Linkage-dynamic" Library="opencv_win_native" Value="dynamic" Condition="'$(Linkage-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="Linkage-static" Library="opencv_win_native" Value="static" Condition="'$(Linkage-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="Linkage-ltcg" Library="opencv_win_native" Value="ltcg" Condition="'$(Linkage-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="Linkage-sxs" Library="opencv_win_native" Value="sxs" Condition="'$(Linkage-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="CallingConvention-cdecl" Library="opencv_win_native" Value="cdecl" Condition="'$(CallingConvention-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="CallingConvention-stdcall" Library="opencv_win_native" Value="stdcall" Condition="'$(CallingConvention-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="CallingConvention-fastcall" Library="opencv_win_native" Value="fastcall" Condition="'$(CallingConvention-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="CallingConvention-thiscall" Library="opencv_win_native" Value="thiscall" Condition="'$(CallingConvention-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-opencv_win_native" />
+    </opencv_win_native_Contains>
+    <opencv_win_native_Contains Text="CallingConvention-clrcall" Library="opencv_win_native" Value="clrcall" Condition="'$(CallingConvention-opencv_win_native)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-opencv_win_native" />
+    </opencv_win_native_Contains>
+  </Target>
+</Project>
